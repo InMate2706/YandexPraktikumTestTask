@@ -1,13 +1,11 @@
 import enums.CargoType;
 
+import static constants.DeliveryParamConstants.MIN_DELIVERY_PRICE;
 import static validation.DeliveryParamValidator.validateCorrectDeliveryParam;
 
 public class YandexPractikumTestTaskMain {
 
-    private final static float MIN_DELIVERY_PRICE = 400f;
-
     public static void main(String[] args) {
-
     }
 
     /**

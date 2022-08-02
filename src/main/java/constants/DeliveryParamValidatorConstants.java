@@ -1,6 +1,6 @@
 package constants;
 
-import static constants.WorkloadDeliveryCoefficientConstants.ALLOWABLE_WORKLOAD_COEFFICIENT;
+import static constants.DeliveryParamConstants.ALLOWABLE_WORKLOAD_COEFFICIENT;
 
 /**
  * Класс констант для валидации входных параметров функции

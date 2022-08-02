@@ -3,8 +3,8 @@ package validation;
 import exceptions.DeliveryParamBadRequestException;
 import exceptions.NotSupportDeliveryTypeException;
 
+import static constants.DeliveryParamConstants.ALLOWABLE_WORKLOAD_COEFFICIENT;
 import static constants.DeliveryParamValidatorConstants.*;
-import static constants.WorkloadDeliveryCoefficientConstants.ALLOWABLE_WORKLOAD_COEFFICIENT;
 
 /**
  * Класс валидации входных параметров рассчета доставки

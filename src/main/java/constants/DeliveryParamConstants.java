@@ -6,12 +6,13 @@ import java.util.Random;
 /**
  * Класс констант для коэффициентов загруженности службы доставки
  */
-public class WorkloadDeliveryCoefficientConstants {
+public class DeliveryParamConstants {
 
     public final static Float DEFAULT_WORKLOAD_COEFFICIENT = 1f;
     public final static Float INCREASED_WORKLOAD_COEFFICIENT = 1.2f;
     public final static Float HIGH_WORKLOAD_COEFFICIENT = 1.4f;
     public final static Float VERY_HIGH_WORKLOAD_COEFFICIENT = 1.6f;
+    public final static float MIN_DELIVERY_PRICE = 400f;
 
     /**
      * Все доступные значения коэффициентов загруженности службы доставки
