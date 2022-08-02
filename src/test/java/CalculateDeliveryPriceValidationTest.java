@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 
 import static constants.DeliveryParamValidatorConstants.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("Проверка валидации параметров функции")
 class CalculateDeliveryPriceValidationTest {
@@ -64,11 +65,29 @@ class CalculateDeliveryPriceValidationTest {
     }
 
     @Test
-    @DisplayName("Позитивный сценарий получения стоимости доставки")
-    void getDeliveryPrice() {
+    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №1")
+    void getDeliveryPricePositiveKeys_1() {
         float result = YandexPractikumTestTaskMain.calculateDeliveryPrice(29d, CargoType.BIG, true,
                 WorkloadDeliveryCoefficientConstants.VERY_HIGH_WORKLOAD_COEFFICIENT);
 
         assertEquals(1120f, result);
+    }
+
+    @Test
+    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №2")
+    void getDeliveryPricePositiveKeys_2() {
+        float result = YandexPractikumTestTaskMain.calculateDeliveryPrice(100.1d, CargoType.BIG, false,
+                WorkloadDeliveryCoefficientConstants.HIGH_WORKLOAD_COEFFICIENT);
+
+        assertEquals(700f, result);
+    }
+
+    @Test
+    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №3")
+    void getDeliveryPricePositiveKeys_3() {
+        float result = YandexPractikumTestTaskMain.calculateDeliveryPrice(5.9d, CargoType.LITTLE, true,
+                WorkloadDeliveryCoefficientConstants.INCREASED_WORKLOAD_COEFFICIENT);
+
+        assertEquals(600f, result);
     }
 }

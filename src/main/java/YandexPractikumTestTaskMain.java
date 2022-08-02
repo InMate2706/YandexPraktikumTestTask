@@ -21,8 +21,8 @@ public class YandexPractikumTestTaskMain {
      */
     public static float calculateDeliveryPrice(Double distance, CargoType cargoType, boolean isFragileCargo, Float workloadDeliveryCoefficient) {
         validateCorrectDeliveryParam(distance, isFragileCargo, workloadDeliveryCoefficient);
-        float resultPrice = (calculateDelivyPriceForDistance(distance) + calculateDelivyPriceForCargoType(cargoType)
-                + calculateDelivyPriceForFragileCargo(isFragileCargo)) * workloadDeliveryCoefficient;
+        float resultPrice = (calculateDelivyPriceByDistance(distance) + calculateDelivyPriceByCargoType(cargoType)
+                + calculateDelivyPriceByFragileCargo(isFragileCargo)) * workloadDeliveryCoefficient;
         return Math.max(resultPrice, MIN_DELIVERY_PRICE);
     }
 
@@ -32,7 +32,7 @@ public class YandexPractikumTestTaskMain {
      * @param distance расстояние
      * @return цена доставки
      */
-    public static float calculateDelivyPriceForDistance(Double distance) {
+    public static float calculateDelivyPriceByDistance(Double distance) {
         if (distance > 30d) {
             return 300f;
         } else if (distance <= 2d) {
@@ -50,7 +50,7 @@ public class YandexPractikumTestTaskMain {
      * @param cargoType тип груза {@link CargoType}
      * @return цена доставки
      */
-    public static float calculateDelivyPriceForCargoType(CargoType cargoType) {
+    public static float calculateDelivyPriceByCargoType(CargoType cargoType) {
         return switch (cargoType) {
             case LITTLE -> 100f;
             case BIG -> 200f;
@@ -63,7 +63,7 @@ public class YandexPractikumTestTaskMain {
      * @param isFragileCargo является ли груз хрупким
      * @return цена доставки
      */
-    public static float calculateDelivyPriceForFragileCargo(boolean isFragileCargo) {
+    public static float calculateDelivyPriceByFragileCargo(boolean isFragileCargo) {
         return isFragileCargo ? 300f : 0f;
     }
 }
