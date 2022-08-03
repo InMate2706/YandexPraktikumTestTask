@@ -75,8 +75,8 @@ class CalculateDeliveryPriceTest {
     }
 
     @Test
-    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №2")
-    void getDeliveryPricePositiveKeys_2() {
+    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №1")
+    void getDeliveryPricePositiveKeys_1() {
         float result = YandexPractikumTestTaskMain.calculateDeliveryPrice(100.1d, CargoType.BIG, false,
                 DeliveryParamConstants.HIGH_WORKLOAD_COEFFICIENT);
 
@@ -84,8 +84,8 @@ class CalculateDeliveryPriceTest {
     }
 
     @Test
-    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №3")
-    void getDeliveryPricePositiveKeys_3() {
+    @DisplayName("Позитивный сценарий получения стоимости доставки, набор данных №2")
+    void getDeliveryPricePositiveKeys_2() {
         float result = YandexPractikumTestTaskMain.calculateDeliveryPrice(5.9d, CargoType.LITTLE, true,
                 DeliveryParamConstants.INCREASED_WORKLOAD_COEFFICIENT);
 
